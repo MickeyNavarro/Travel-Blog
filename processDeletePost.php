@@ -14,12 +14,16 @@ background-image: linear-gradient(rgba(20,20,20,0.3),rgba(20,20,20,0.3)), url(IM
 	background-size: cover;
 	background-position: center;
 	color: white;
+	text-align: center;
+	font-size: 30px;
+	padding-top: 100px;
 	font-family:'Comfortaa', cursive;
+	margin: 0;
 }
 </style>
 <body>
 <div class="home">
-<h2>Deleted Blog Posts</h2>
+<h2>Deleted Blog Post</h2>
 <p>Click <a href=showPostsAdmin.php>here</a> to go back to admin page </p>
 <?php
 session_start();

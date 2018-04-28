@@ -11,10 +11,11 @@ body{
 	background-size: cover;
 	background-position: center;
 	color: white;
-	font-size: 20px;
-	padding-top: 15px;
-	padding-left: 25px;
+	text-align: center;
+	font-size: 30px;
+	padding-top: 100px;
 	font-family:'Comfortaa', cursive;
+	margin: 0;
 }
 a:link{
     color: white;
@@ -30,6 +31,8 @@ a:active{
 }
 
 </style>
+<body>
+<h1>Comment Result?</h1>
 <?php 
 $commentText = $_GET['textComment'];
 $recipe = $_GET['recipe'];
@@ -40,15 +43,15 @@ $role = $_SESSION['role'];
 
 echo "user id " . $_SESSION['userid'];
 if ($conn && isset($_SESSION['userid']) && $role = "admin") {
-    $sql_statement = "UPDATE `comments` SET `comment_text` = '$commentText', `posts_id` = '$recipe', `users_id` = '$user' WHERE `id` = '$id'";
+    $sql_statement = "UPDATE `comments` SET `Text` = '$commentText', `posts_id` = '$recipe', `users_id` = '$user' WHERE `id` = '$id'";
     ?>
     <body>
     <?php 
     $result = mysqli_query($conn,$sql_statement);
     if ($result) {
-        echo "number of rows affected = " . mysqli_affected_rows($conn);
+        echo "Number of rows affected = " . mysqli_affected_rows($conn);
         echo "<br>Data updated successfully!";
-        echo "<br>Click <a href='showSearch.php'>here</a> to return";
+        echo "<br>Click <a href='showCommentsAdmin.php'>here</a> to return";
     }
     else {
         echo "Error in the sql " . mysqli_error($conn);

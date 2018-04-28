@@ -31,10 +31,11 @@ body{
 	background-size: cover;
 	background-position: center;
 	color: white;
-	font-size: 25px;
-	padding-top: 15px;
-	padding-left: 25px;
+	text-align: center;
+	font-size: 30px;
+	padding-top: 100px;
 	font-family:'Comfortaa', cursive;
+	margin: 0;
 }
 </style>
 <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">

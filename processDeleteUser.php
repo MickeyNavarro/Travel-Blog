@@ -12,9 +12,12 @@ body{
     background-image: linear-gradient(rgba(20,20,20,0.3),rgba(20,20,20,0.3)), url(20170605_105312.jpg);
     height: 100vh;
 	background-position: center;
-	color: white;
-	font-size: 25px;
+ 	color: white;
+	text-align: center;
+	font-size: 30px;
+	padding-top: 100px;
 	font-family:'Comfortaa', cursive;
+	margin: 0;
 }
 </style>
 <body>

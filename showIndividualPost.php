@@ -93,7 +93,7 @@ if ($result_comments) {
     echo "</div></p>";
 }
 ?>
-            <form action = "processComments.php">
+            <form action = "processAddComment.php">
             <input type = "hidden" name = "ID" value = "<?php echo $row ["ID"]?>"></input>
             Add new comment(s):<textarea name = "comments" rows = "5" cols = "50"></textarea><br>
             Rating: <select name = "rating">

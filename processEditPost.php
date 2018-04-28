@@ -19,8 +19,11 @@ body{
 	background-size: cover;
 	background-position: center;
 	color: white;
+	text-align: center;
 	font-size: 30px;
+	padding-top: 100px;
 	font-family:'Comfortaa', cursive;
+	margin: 0;
 }
 a:link{
     color: white;
@@ -39,6 +42,7 @@ a:active{
 }
 </style>
 <body>
+<h1>Editted Blog Post</h1>
 <?php
 
 if ($conn && isset($_SESSION['userid']) && $role = "admin") {

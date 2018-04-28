@@ -11,7 +11,6 @@ $body = $_GET['postBody'];
 $user_id = $_SESSION['userid'];
 ?>
 <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
-<body>
 <style>
 a:link{
     color: white;
@@ -29,29 +28,27 @@ body{
 background-image: linear-gradient(rgba(20,20,20,0.3),rgba(20,20,20,0.3)), url(IMG_2336.jpg);
 	background-size: cover;
 	background-position: center;
-	font-family:'Comfortaa', cursive;
-	}
-.text{
-    color:white;
-    padding-top: 100px;
+	color: white;
 	text-align: center;
 	font-size: 30px;
+	padding-top: 100px;
 	font-family:'Comfortaa', cursive;
-}
+	}
 </style>
+<body>
 <div class = "home">
+<h1>Post Result?</h1>
+
 <?php
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-echo "Connected successfully";
-
 
 $sql = "INSERT INTO `posts`(`Title`, `Post`, `users_ID`) VALUES ('$title','$body','$user_id')";
 $result = mysqli_query($conn, $sql);
 
 if ($result) {
-    echo "<br>Success! You have created a new blog post!<br>";
+    echo "Success! You have created a new blog post!<br>";
     echo "Click <a href=showAllPosts.php>here</a> to view your posts!<br>"; 
 }
 else {

@@ -12,14 +12,15 @@ body{
 	background-size: cover;
 	background-position: center;
 	color: white;
-	font-size: 20px;
-	padding-top: 15px;
-	padding-left: 25px;
+	text-align: center;
+	font-size: 30px;
+	padding-top: 100px;
 	font-family:'Comfortaa', cursive;
+	margin: 0;
 }
 </style>
 <body>
-<div class="delete">
+<h1>Comment Result?</h1>
 <?php 
 
 $deleteComment = $_GET['comment_id'];
@@ -39,4 +40,3 @@ if ($conn) {
 }
 ?>
 </body>
-</div>

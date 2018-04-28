@@ -27,6 +27,14 @@ body{
   	background-image: linear-gradient(rgba(20,20,20,0.3),rgba(20,20,20,0.3));
   	font-family:'Comfortaa', cursive;
 }
+.commentscontainer{ 
+	border: 1px solid black; 
+  	border-radius: 5px; 
+  	margin: 10px; 
+  	padding: 10px; 
+  	background-image: linear-gradient(rgba(20,20,20,0.3),rgba(20,20,20,0.3));
+  	font-family:'Comfortaa', cursive;
+}
 a:link { 
     color: white; 
 }
@@ -62,7 +70,6 @@ if ($conn) {
             echo "<div class = 'post-container'>";
             echo "<h2>" . '<a href="showIndividualPost.php?id='.$row["ID"].'">' . $row ["Title"] .'</a>' . "</h2><br>";
             echo $row ["Post"] . "<br>";
-            echo "<h3>Comments: </h3>";
             
             $post_id = $row ["ID"];
             $sql_comments = "SELECT * FROM `comments` JOIN `users` ON users.ID = comments.users_ID WHERE `posts_ID` = '$post_id'";
@@ -72,6 +79,7 @@ if ($conn) {
             $sum = 0;
             
             if ($result_comments) {
+                echo "<div class= 'commentscontainer'><p>Comments: <br>";
                 while ($row_comments = mysqli_fetch_assoc($result_comments)) {
                     echo "<br>" . $row_comments["Text"];
                     echo "<br>Rating: " . $row_comments["Rating"];
@@ -79,9 +87,10 @@ if ($conn) {
                     $sum = $sum  + $row_comments["Rating"];
                     $ratingCount++;
                 }
+                echo "</div></p>";
             }
 ?>
-            <form action = "processComments.php">
+            <form action = "processAddComment.php">
             <input type = "hidden" name = "ID" value = "<?php echo $row ["ID"]?>"></input>
             Add new comment(s):<textarea name = "comments" rows = "5" cols = "50"></textarea><br>
             Rating: <select name = "rating">

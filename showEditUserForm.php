@@ -42,10 +42,12 @@ body{
     height: 100vh;
 	background-size: cover;
 	background-position: center;
-	font-size: 25px;
 	color: white;
-	margin: 25px;
+	text-align: center;
+	font-size: 30px;
+	padding-top: 100px;
 	font-family:'Comfortaa', cursive;
+	margin: 0;
 	}
 </style>
 <body>

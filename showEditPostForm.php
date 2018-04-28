@@ -35,8 +35,11 @@ background-image: linear-gradient(rgba(20,20,20,0.3),rgba(20,20,20,0.3)), url(IM
 	background-size: cover;
 	background-position: center;
 	color: white;
+	text-align: center;
 	font-size: 30px;
+	padding-top: 100px;
 	font-family:'Comfortaa', cursive;
+	margin: 0;
 }
  
  </style>

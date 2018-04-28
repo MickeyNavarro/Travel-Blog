@@ -15,7 +15,6 @@ $role = $_GET['role'];
 $userID = $_SESSION['userid'];
 $role = $_SESSION['role'];
 
-echo "user id " . $_SESSION['userid'];
 if ($conn && isset($_SESSION['userid']) && $_SESSION['role'] == "admin") {
     $sql = "UPDATE `users` SET `Full Name` = '$name', `Phone Number` = '$phone', `Username` = '$user', `Password` = '$pass', `Role` = '$role' WHERE `users`.`ID` = '$id'";
     
@@ -29,10 +28,15 @@ if ($conn && isset($_SESSION['userid']) && $_SESSION['role'] == "admin") {
 	background-size: cover;
 	background-position: center;
 	color: white;
+	text-align: center;
+	font-size: 30px;
+	padding-top: 100px;
 	font-family:'Comfortaa', cursive;
+	margin: 0;
     }
     </style>
     <body>
+    <h1>Editted User</h1>
     <?php 
     $result = mysqli_query($conn,$sql);
     if ($result) {
