@@ -1,5 +1,5 @@
 <!-- Gets and outputs all the posts of every user; can only be accessed if role is admin -->
-<!-- Allows admin to edit or delete any post -->
+<!-- Allows admin to edit or delete any post through the use of showEditForm.php and processDeletePost.php -->
 
 <!DOCTYPE html>
 <html>

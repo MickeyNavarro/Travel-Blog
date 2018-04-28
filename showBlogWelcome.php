@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <!-- Welcome page to introduce the user to the blog -->
 <!-- Includes an interactive google map -->
-
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="style.css">
@@ -17,7 +16,7 @@ body{
     float: left;
 	text-align: center;
 	text-decoration: none;
-	padding-top: 5px;
+	margin: 0; 
 }
 
 #googleMap { 
@@ -34,10 +33,8 @@ require_once 'showMenu.php';
 require_once 'connector_blog.php';
 //https://www.quackit.com/html/codes/html_marquee_code.cfm
 ?>
-<!-- allows the text to scroll above the map with a photo -->
 <marquee behavior="scroll" direction="left"><img src="transportation.png" width="60" height="40">Welcome to our travel blog! Follow along as people from different places share their experience traveling the world!</marquee>
 
-<!-- creates a map  -->
 <div id="googleMap"></div>
 <script>
 //https://www.w3schools.com/graphics/google_maps_intro.asp

@@ -1,5 +1,6 @@
 <!-- creates a form for the user to edit a new user -->
 <!-- as long as the user has the role of an admin -->
+<!-- allows for processEditUser.php to get the values from the form -->
 
 <?php
 session_start();

@@ -1,4 +1,5 @@
 <!-- creates a form for the user to edit a post -->
+<!-- allows for processEditPost.php to get the values from the form -->
 
  <?php 
  session_start();
@@ -40,7 +41,7 @@ background-image: linear-gradient(rgba(20,20,20,0.3),rgba(20,20,20,0.3)), url(IM
  
  </style>
 <div class="home">
-<h2>Edit a post</h2>
+<h2>Edit a Post</h2>
 <p>Fill out all of the fields and submit</p>
 <form action="processEditPost.php">
 <input type = "hidden" name = "postid" value = "<?php echo $postid; ?>"></input>

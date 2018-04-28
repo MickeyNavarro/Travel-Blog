@@ -21,6 +21,9 @@ background-image: linear-gradient(rgba(20,20,20,0.3),rgba(20,20,20,0.3)), url(IM
 	padding-top: 100px;
 	font-family:'Comfortaa', cursive;
 	}
+h2{ 
+    color: #DAB3FF;
+}
 </style>
 </div>
 <body>
@@ -30,7 +33,7 @@ require_once 'showMenu.php';
 require_once 'connector_blog.php';
 ?>
 <div class="add">
-<h2>Add a blog post</h2>
+<h2>Add a New Post</h2>
 <p>Fill out all of the fields and submit</p>
 <form action="processAddPost.php">
     Post Title:<br><textarea class="box" rows="2" cols="40" name="postTitle"></textarea><br>

@@ -4,7 +4,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="style.css">
 <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
 <meta charset="UTF-8">
 <title>Blog Posts</title>
@@ -33,8 +32,8 @@ body {
  	background-repeat: no-repeat;
 	background-attachment: fixed;
 	font-size: 30px;
-	padding-left: 20px;
 	font-family:'Comfortaa', cursive;
+	margin: 0;
 }
 .postscontainer{ 
 	border: 1px solid black; 
@@ -43,6 +42,7 @@ body {
   	padding: 10px; 
   	background-image: linear-gradient(rgba(20,20,20,0.3),rgba(20,20,20,0.3));
   	font-family:'Comfortaa', cursive;
+  	padding-left: 20px;
 }
 </style>
 <body>

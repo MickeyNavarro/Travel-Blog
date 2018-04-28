@@ -1,5 +1,5 @@
 <!-- Gets and outputs all the users and their information; can only be accessed if role is admin -->
-<!-- Allows admin to edit or delete any user -->
+<!-- Allows admin to edit or delete any user through the use of showEditUserForm.php and processDeleteUser.php-->
 
 
 <!DOCTYPE html>

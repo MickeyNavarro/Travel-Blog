@@ -1,4 +1,5 @@
 <!-- creates a form for the user to edit a comment -->
+<!-- allows for processEditComment.php to get the values from the form -->
 
 <?php
 session_start();

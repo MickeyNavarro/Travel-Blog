@@ -1,4 +1,4 @@
-<!-- Shows a full individual post; includes the ability to rate and comment on the post -->
+<!-- Shows a full individual post; includes the ability to rate and comment on the post through the use of processEditComments-->
 <!-- Allows shows every comment/rate and the average rating of the post -->
 
 <!DOCTYPE html>
@@ -20,14 +20,32 @@ body{
     font-family:'Comfortaa', cursive;
 }
 h2{
+    font-size: 60px;
+    color: #ffcb58;
+    font-family:'Comfortaa', cursive;
+}
+h3{
     color:white;
     font-size: 30px;
     font-family:'Comfortaa', cursive;
+}
+p {
+    color: white;
+	font-size: 15px;
+	font-family:'Comfortaa', cursive;
 }
 .links{
     color: white;
     font-size: 30px;
     font-family:'Comfortaa', cursive;
+}
+.commentscontainer{ 
+	border: 1px solid black; 
+  	border-radius: 5px; 
+  	margin: 10px; 
+  	padding: 10px; 
+  	background-image: linear-gradient(rgba(20,20,20,0.3),rgba(20,20,20,0.3));
+  	font-family:'Comfortaa', cursive;
 }
 </style>
 <body>
@@ -48,8 +66,8 @@ $query = "SELECT `ID`, `Title`, `Post`, `users_ID` FROM `posts` WHERE `users_ID`
 
 $result = mysqli_query($conn, $query);
 $row = mysqli_fetch_assoc($result);
-echo $row ["Title"] . "<br>";
-echo "<br>";
+echo "<h2>" . $row ["Title"] . "</h2><br>";
+
 ?>
 </h2>
 
@@ -64,6 +82,7 @@ $ratingCount = 0;
 $sum = 0;
 
 if ($result_comments) {
+    echo "<div class= 'commentscontainer'><p>Comments: <br>";
     while ($row_comments = mysqli_fetch_assoc($result_comments)) {
         echo "<br>" . $row_comments["Text"];
         echo "<br>Rating: " . $row_comments["Rating"];
@@ -71,6 +90,7 @@ if ($result_comments) {
         $sum = $sum  + $row_comments["Rating"];
         $ratingCount++;
     }
+    echo "</div></p>";
 }
 ?>
             <form action = "processComments.php">
@@ -92,7 +112,7 @@ if ($result_comments) {
                 $avg = $sum / $ratingCount;
             }
             
-            echo "<br><h3>". "Average Rating: " . round($avg,2) . "</h3>";
+            echo "<br>". "Average Rating: " . round($avg,2);
             ?>
             <br><button type = "submit">Submit</button>
             </form>
