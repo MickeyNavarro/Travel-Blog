@@ -1,0 +1,109 @@
+<!-- creates a form for the user to login if they have an account-->
+<!-- if not, it holds the link to register-->
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+<style>
+body{
+	margin: 0;
+	padding: 0;
+	background: url(IMG_6038.jpg);
+	background-size: cover;
+	font-family:'Comfortaa', cursive;
+}
+.login{
+	width: 320px;
+	height: 420px;
+	background: rgba(211,211,211,0.5);
+	color: #fff;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+	border-radius: 5%;
+	font-family: 'Comfortaa', cursive;
+}
+
+h1{
+	margin: 0;
+	padding: 0 0 20px;
+	padding-top: 20px;
+	text-align: center;
+	font-size: 30px; 
+
+}
+.login form{
+	margin-top: 5px;
+	padding-top: 10px;
+	padding-left: 10px;
+	font-weight: bold;
+	font-size: 20px;
+}
+.login input {
+	width: 95%;
+	margin-bottom: 20px;
+
+}
+.login input[type="text"], input[type="password"]{
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 18.5px;
+}
+.login p{
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+.login input[type="submit"]{
+	border: none;
+	outline: none;
+	height: 40px;
+	background: #A9A9A9;
+	color: #fff;
+	font-size: 18px;
+	border-radius: 20px;
+}
+.login input[type="submit"]:hover {
+	cursor: pointer;
+	background: #DAB3ff;
+	color: #000;
+}
+.new p{
+	padding-left: 66px;
+}
+.new a{
+	text-decoration: underline;
+	font-size: 14px;
+	color: #fff;
+}
+.new a:hover {
+	color: #DAB3FF
+}
+</style>
+	<title>Log In</title>
+	<link rel= "stylesheet" type="text/css">
+	</head>
+<body>
+<div class="login">
+<h1>Login Here!</h1>
+
+<form method="get" action="processLogin.php">
+<p>Username: </p><input type ="text" name="user" required><br><br>
+<p>Password: </p><input type ="password" name="pw" required><br>
+<input type="submit" value="Submit">
+</form>
+<div class="new">
+<p>
+New User?
+<a href=showRegistration.html>Sign Up Here</a>
+</p>
+</div>
+</div>
+</body>
